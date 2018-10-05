@@ -2,7 +2,7 @@
 # osgEarth文档目录
 
   * [关于osgEarth](./about.md)
-    * [介绍](./about.md)
+    * [介绍](./about.md#介绍)
     * Community Resources
     * License
     * Maintainers
