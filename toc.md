@@ -35,3 +35,5 @@
     * Other Terrain Formats
     * Community and Support
     * Licensing
+
+  * [tests 详解](./tests.md)
