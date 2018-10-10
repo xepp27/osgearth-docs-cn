@@ -3,7 +3,7 @@
 
   * [关于osgEarth](./about.md)
     * [介绍](./about.md#介绍)
-    * Community Resources
+    * [社会资源](./about.md#社会资源)
     * License
     * Maintainers
   * Building osgEarth
