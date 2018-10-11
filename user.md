@@ -1,5 +1,5 @@
 # 用户指南
-* [工具]
+* [工具](./user/tool.md)
   * [osgearth_viewer]
   * [osgearth_version]
   * [osgearth_cache]
