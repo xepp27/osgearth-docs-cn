@@ -80,3 +80,7 @@ osgEarth的任务是：
  4. iOS/*静态链接异常*：LGPL要求在LGPL下发布与LGPL库（如osgEarth）静态链接的任何内容。
  在这种情况下，我们给LGPL一个例外。
  如果您静态地将osgEarth与您的专有代码链接在一起，则不需要在LGPL下发布您自己的代码。
+
+ ## 维护者
+
+ Pelican Mapping维护osgEarth。
