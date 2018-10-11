@@ -4,8 +4,8 @@
   * [关于osgEarth](./about.md)
     * [介绍](./about.md#介绍)
     * [社会资源](./about.md#社会资源)
-    * License
-    * Maintainers
+    * [授权](./about.md#授权)
+    * [维护者](./about.md#维护者)
   * Building osgEarth
     * Get the Source Code
     * Get the Dependencies
