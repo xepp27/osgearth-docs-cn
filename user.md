@@ -1,4 +1,4 @@
-# [用户指南]
+# 用户指南
 * [工具]
   * [osgearth_viewer]
   * [osgearth_version]
