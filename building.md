@@ -12,12 +12,12 @@ osgEarth是一个跨平台的库，使用CMake构建系统。您需要2.8或更�
 
 osgEarth托管在GitHub上，你需要一个git客户端来访问它。我们向Windows用户推荐TortoiseGit。
 
-使用客户端来克隆存储器：
+使用客户端来复制存储器：
 http://github.com/gwaldron/osgearth.git
 
 选项2：下载标记的版本
 
-要下载源代码的tarball或ZIP文件，请访问osgEarth标签并选择所需的文件。最新的官方发布在顶部。
+要下载源代码的tarball或ZIP文件，请访问osgEarth标签并选择所需的文件。官方的最新发布在顶部。
 
 ## 获取依赖项
 
