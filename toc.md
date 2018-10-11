@@ -36,4 +36,6 @@
     * Community and Support
     * Licensing
 
+  * [使用vcpkg构建适用于Windows的osgEarth](./vcpkg.md)
+  * [构建适用于iOS的osgEarth（和OSG）](./ios.md)
   * [tests 详解](./tests.md)
