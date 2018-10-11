@@ -8,8 +8,8 @@
     * [维护者](./about.md#维护者)
   * [建立osgEarth](./building.md)
     * [获取源代码](./building.md#获取源代码)
-    * Get the Dependencies
-    * Build it
+    * [获取依赖项](./building.md#获取依赖项)
+    * [建立](./building.md#建立)
   * User Guide
     * Tools
     * Using Earth Files
