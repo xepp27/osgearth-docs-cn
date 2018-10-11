@@ -35,7 +35,7 @@ http://github.com/gwaldron/osgearth.git
 - GEOS 3.2.0或更高版本——用于拓扑操作的C++库。
 osgEarth使用GEOS执行各种几何操作，如缓冲和交叉。如果您打算在osgEarth中使用矢量要素数据，您可能需要这样做。
 
-   o SQLite——自包含，无服务器，零配置，事务性SQL数据库引擎。用于访问sqlite/mbtiles数据集。您可能需要这些提示来从Windows二进制文件中包含的.def和.dll文件创建必要的.lib文件：http://eli.thegreenplace.net/2009/09/23/compiling-sqlite-on-windows
+ - SQLite——自包含，无服务器，零配置，事务性SQL数据库引擎。用于访问sqlite/mbtiles数据集。您可能需要这些提示来从Windows二进制文件中包含的.def和.dll文件创建必要的.lib文件：http://eli.thegreenplace.net/2009/09/23/compiling-sqlite-on-windows
 - QT_ 5.4或更高版本——跨平台UI框架。用于构建osgEarth的Qt支持库，这对于构建我们osgEarth的Qt应用程序很有用（尽管不是必需的）。将QT_QMAKE_EXECUTABLE CMake变量指向要使用的qmake.exe，CMake将填充所有其他QT变量。
 
 ## 建立
