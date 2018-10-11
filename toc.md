@@ -10,12 +10,12 @@
     * [获取源代码](./building.md#获取源代码)
     * [获取依赖项](./building.md#获取依赖项)
     * [建立](./building.md#建立)
-  * User Guide
-    * Tools
-    * Using Earth Files
-    * Caching
-    * Spatial References
-    * Features & Symbology
+  * [用户指南](./user.md)
+    * [工具](./user.md#工具)
+    * [使用地球文件](./user.md#使用地球文件)
+    * [缓存](./user.md#缓存)
+    * [空间参考](./user.md#空间参考)
+    * [功能和符号](./user.md#功能和符号)
   * Developer Topics
     * Working with Maps
     * Utilities SDK
