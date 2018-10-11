@@ -6,8 +6,8 @@
     * [社会资源](./about.md#社会资源)
     * [授权](./about.md#授权)
     * [维护者](./about.md#维护者)
-  * Building osgEarth
-    * Get the Source Code
+  * [建立osgEarth](./building.md)
+    * [获取源代码](./building.md#获取源代码)
     * Get the Dependencies
     * Build it
   * User Guide
