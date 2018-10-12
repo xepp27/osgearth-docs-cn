@@ -32,7 +32,7 @@ osgearth_version显示osgEarth的当前版本。
 |--version-number|仅显示版本号|
 
 ## osgearth_cache
-osgearth_cache可用于管理osgEarth的缓存。有关缓存的更多信息，请参阅[缓存](.\caching.md)。osgearth_cache最常见的用法是使用--seed参数以非交互方式填充缓存。
+osgearth_cache可用于管理osgEarth的缓存。有关缓存的更多信息，请参阅[缓存](.\Caching.md)。osgearth_cache最常见的用法是使用--seed参数以非交互方式填充缓存。
 
 **样例**
 
