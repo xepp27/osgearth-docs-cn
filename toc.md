@@ -11,11 +11,11 @@
     * [获取依赖项](./BuildingOsgEarth.md#获取依赖项)
     * [建立](./BuildingOsgEarth.md#建立)
   * [用户指南](./UserGuide.md)
-    * [工具](./UserGuide.md#工具)
-    * [使用地球文件](./UserGuide.md#使用地球文件)
-    * [缓存](./UserGuide.md#缓存)
-    * [空间参考](./UserGuide.md#空间参考)
-    * [功能和符号](./UserGuide.md#功能和符号)
+    * [工具](./UserGuide/Tool.md)
+    * [使用地球文件](./UserGuide/UsingEarthFiles.md)
+    * [缓存](./UserGuide/Caching.md)
+    * [空间参考](./UserGuide/SpatialReference.md)
+    * [功能和符号](./UserGuide/FeaturesandSymbology.md)
   * Developer Topics
     * Working with Maps
     * Utilities SDK
