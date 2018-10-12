@@ -1,7 +1,7 @@
 # 工具
 osgEarth附带了许多工具，可以帮助你处理地球文件和地理空间数据。
 ## osgearth_viewer
-osgearth_viewer可以从命令行加载并显示地图。 osgEarth EarthManipulator（地球操纵器）用于控制摄像机，并对地理空间数据的显示进行了优化。
+osgearth_viewer可以从命令行加载并显示地图。 osgEarth EarthManipulator（地球控制器）用于控制摄像机，并对地理空间数据的显示进行了优化。
 
 **样例**
 
