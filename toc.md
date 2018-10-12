@@ -1,21 +1,21 @@
 
 # osgEarth文档目录
 
-  * [关于osgEarth](./about.md)
-    * [介绍](./about.md#介绍)
-    * [社会资源](./about.md#社会资源)
-    * [授权](./about.md#授权)
-    * [维护者](./about.md#维护者)
-  * [建立osgEarth](./building.md)
-    * [获取源代码](./building.md#获取源代码)
-    * [获取依赖项](./building.md#获取依赖项)
-    * [建立](./building.md#建立)
-  * [用户指南](./user.md)
-    * [工具](./user.md#工具)
-    * [使用地球文件](./user.md#使用地球文件)
-    * [缓存](./user.md#缓存)
-    * [空间参考](./user.md#空间参考)
-    * [功能和符号](./user.md#功能和符号)
+  * [关于osgEarth](./AboutOsgEarth.md)
+    * [介绍](./AboutOsgEarth.md#介绍)
+    * [社会资源](./AboutOsgEarth.md#社会资源)
+    * [授权](./AboutOsgEarth.md#授权)
+    * [维护者](./AboutOsgEarth.md#维护者)
+  * [建立osgEarth](./BuildingOsgEarth.md)
+    * [获取源代码](./BuildingOsgEarth.md#获取源代码)
+    * [获取依赖项](./BuildingOsgEarth.md#获取依赖项)
+    * [建立](./BuildingOsgEarth.md#建立)
+  * [用户指南](./UserGuide.md)
+    * [工具](./UserGuide.md#工具)
+    * [使用地球文件](./UserGuide.md#使用地球文件)
+    * [缓存](./UserGuide.md#缓存)
+    * [空间参考](./UserGuide.md#空间参考)
+    * [功能和符号](./UserGuide.md#功能和符号)
   * Developer Topics
     * Working with Maps
     * Utilities SDK
