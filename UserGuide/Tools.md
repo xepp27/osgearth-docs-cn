@@ -91,7 +91,7 @@ osgearth_package从地球文件中创建可再分发的基于TMS的包。
 |--overwrite|覆盖现有贴片|
 |--keep-empties|写出完全透明的图像贴片（通常是被废弃的）|
 |--continue-single-color|继续细分单色贴片，细分一般停留在单色图像上|
-|--db-options|db选项串用于引用传递给图像写入器（例如，“JPEG_QUALITY 60”）|
+|--db-options|db选项串以引用传递给图像写入器（例如，“JPEG_QUALITY 60”）|
 |--mp|使用多处理来处理贴片，这对GDAL源有用，因为可以避免全局GDAL锁定|
 |--mt|使用多线程处理贴片|
 |--concurrency|提供-mp或-mt时使用的线程或进程数|
@@ -100,7 +100,7 @@ osgearth_package从地球文件中创建可再分发的基于TMS的包。
 
 ## osgearth_tfs
 
-osgearth_tfs从特征源（如形状文件）生成TFS数据集。通过对特征进行预处理为TFS提供的网格结构，可以显著提高大数据集的性能。此外，生成的TFS包可以由任何标准网络服务器提供，网络启用数据集。
+osgearth_tfs从特征源（如形状文件）生成TFS数据集。将特征预处理为TFS提供的网格结构，可以显著提高大数据集的性能。此外，生成的TFS包可以由任何标准网络服务器提供，网络启用数据集。
 
 **样例**
 
@@ -108,48 +108,51 @@ osgearth_tfs从特征源（如形状文件）生成TFS数据集。通过对特�
 
 |参数|描述|
 |--------------------|--------------------|
-|filename|	Shapefile (or other feature source data file )|
-|--first-level level|	The first level where features will be added to the quadtree|
-|--max-level level|	The maximum level of the feature quadtree|
-|--max-features|	The maximum number of features per tile|
-|--grid|	Generate a single level grid with the specified resolution. Default units are meters. (ex. 50, 100km, 200mi)|
-|--out|	The destination directory|
-|--layer|	The name of the layer to be written to the metadata document|
-|--description|	The abstract/description of the layer to be written to the metadata document|
-|--expression|	The expression to run on the feature source, specific to the feature source|
-|--order-by|	Sort the features, if not already included in the expression. Append DESC for descending order!|
-|--crop|	Crops features instead of doing a centroid check. Features can be added to multiple tiles when cropping is enabled|
-|--dest-srs|	The destination SRS string in any format osgEarth can understand (wkt, proj4, epsg). If none is specific the source data SRS will be used.|
+|filename|形状文件（或其它特征源数据文件）|
+|--first-level level|特征被添加到四分树的第一层|
+|--max-level level|特征四分树的最大层|
+|--max-features|每片贴片中特征的最大数目|
+|--grid|生成具有指定分辨率的单层网格。默认单位是米（如50,100km,200mi）|
+|--out|目标目录|
+|--layer|要写入元数据文档的图层的名称
+|--description|要写入元数据文档的图层的抽象/描述|
+|--expression|运行特征源所用的表达，具体到特征源|
+|--order-by|如果尚未包含于表达中，对特征进行排序。附带DESC按降序排列！|
+|--crop|裁剪特征，而不是进行中心检查。启用裁剪时可以用于多个贴片|
+|--dest-srs|osgEarth可以理解的任何格式的目标SRS串（wkt，proj4，epsg）。如果没有特定的，则将使用源数据SRS|
 
-osgearth_backfill
+## osgearth_backfill
+osgearth_backfill是一种专用工具，用于后处理TMS数据集。一些网络地图服务在不同的缩放级别使用完全不同的数据集。例如，他们可能会使用NASA BlueMarble图像，达到4级后突然切换到LANDSAT数据。这适用于2D滑动地图可视化，但在3D中查看时可能会在视觉上分散注意力，因为不同LOD相邻贴片看起来完全不同。
 
-osgearth_backfill是一种专用工具，用于后处理TMS数据集。一些Web地图服务在不同的缩放级别使用不同的完全不同的数据集。例如，他们可能会使用NASA BlueMarble图像，直到达到4级，然后突然切换到LANDSAT数据。这适用于2D滑动地图可视化，但在3D中查看时可能会在视觉上分散注意力，因为不同LOD处的相邻切片看起来完全不同。
+osgearth_backfill允许您像通常那样生成TMS数据集（使用osgearth_package或其他工具），然后从指定的更高级别的详细信息中“回填”较低级别的详细信息。例如，您可以指定最大级别10，并且将根据级别10中获得的数据重新生成0-9级。
 
-osgearth_backfill允许您像通常那样生成TMS数据集（使用osgearth_package或其他工具），然后从指定的更高级别的详细信息中“回填”较低级别的详细信息。例如，您可以指定最大级别10，并且将根据级别10中找到的数据重新生成lods 0-9。
-
-样品使用
+**样例**
 
 osgearth_backfill tms.xml
-参数说明
---bounds xmin ymin xmax ymax bounds to backfill（在地图坐标中;默认=整个地图
---min-level level停止回填的最低级别。 （缺省值= 0）
---max-level level从（default = inf）开始回填的级别
---db-options数据库选项字符串以引号传递给图像编写器（例如，“JPEG_QUALITY 60”）
-osgearth_boundarygen
 
+|参数|描述|
+|--------------------|--------------------|
+|--bounds xmin ymin xmax ymax|回填的边界（在地图坐标中；默认=整个地图）|
+|--min-level level|停止回填的最低级别（默认=0）|
+|--max-level level|开始回填的级别（默认=inf）|
+|--db-options|db选项串以引用传递给图像写入器（例如，“JPEG_QUALITY 60”）|
+
+##osgearth_boundarygen
 osgearth_boundarygen生成可以与osgEarth <mask>图层一起使用的边界几何体，以便将外部模型固定到地形中。
 
-样品使用
+**样例**
 
-osgearth_boundarygen model_file [options]
-参数说明
---out file_name边界几何的输出文件（默认为boundary.txt）
---no-geocentric Skip geocentric reprojection（适用于平面数据库）
---convex-hull计算凸壳而不是完整边界
---verbose打印进度到控制台
-- 在3D窗口中查看结果
-- 容差N个小于此距离的顶点将合并（0.005）
---precision N输出坐标将有这么多有效数字（12）
-osgearth_overlayviewer
+osgearth_boundarygen model_file \[options]
 
-osgearth_overlayviewer是一个用于调试osgEarth中的overlay decorator功能的实用程序。它显示了两个窗口，一个窗口具有地图的普通视图，另一个窗口显示用于叠加计算的边界平截头体。
+|参数|描述|
+|--------------------|--------------------|
+|--out file_name|边界几何体的输出文件（默认为boundary.txt）|
+|--no-geocentric|跳过地心重投影（适用于平面数据库）|
+|--convex-hull|计算凸壳，而不是完整边界|
+|--verbose|在控制台显示进度|
+|--view|在3D窗口中查看结果|
+|- tolerance N|小于此距离的顶点将合并（0.005）|
+|--precision N|输出坐标将有这么多有效数字（12）|
+
+## osgearth_overlayviewer
+osgearth_overlayviewer是一个用于调试osgEarth覆盖装饰器功能的实用程序。它显示了两个窗口，一个窗口是显示地图的普通视图，另一个窗口显示用于覆盖计算的边界视锥。
