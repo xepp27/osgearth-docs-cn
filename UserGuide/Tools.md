@@ -128,7 +128,7 @@ osgearth_backfill允许您像通常那样生成TMS数据集（使用osgearth_pac
 
 **样例**
 
-osgearth_backfill tms.xml
+`osgearth_backfill tms.xml`
 
 |参数|描述|
 |--------------------|--------------------|
@@ -137,12 +137,12 @@ osgearth_backfill tms.xml
 |--max-level level|开始回填的级别（默认=inf）|
 |--db-options|db选项串以引用传递给图像写入器（例如，“JPEG_QUALITY 60”）|
 
-##osgearth_boundarygen
+## osgearth_boundarygen
 osgearth_boundarygen生成可以与osgEarth <mask>图层一起使用的边界几何体，以便将外部模型固定到地形中。
 
 **样例**
 
-osgearth_boundarygen model_file \[options]
+`osgearth_boundarygen model_file \[options]`
 
 |参数|描述|
 |--------------------|--------------------|
