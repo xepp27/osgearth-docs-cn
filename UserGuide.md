@@ -9,12 +9,12 @@
   * [osgearth_backfill](./UserGuide/Tools.md#osgearth_backfill)
   * [osgearth_boundarygen](./UserGuide/Tools.md#osgearth_boundarygen)
   * [osgearth_overlayviewer](./UserGuide/Tools.md#osgearth_overlayviewer)
-* [使用地球文件]
-  * [地球文件内容]
-  * [一个简单的地球文件]
-  * [多个图像层]
-  * [添加高程数据]
-  * [缓存]
+* [使用地球文件](./UserGuide/UsingEarthFiles.md)
+  * [地球文件内容](./UserGuide/UsingEarthFiles.md#地球文件内容)
+  * [一个简单的地球文件](./UserGuide/UsingEarthFiles.md#一个简单的地球文件)
+  * [多个图像层](./UserGuide/UsingEarthFiles.md#多个图像层)
+  * [添加高程数据](./UserGuide/UsingEarthFiles.md#添加高程数据)
+  * [缓存](./UserGuide/UsingEarthFiles.md#缓存)
 * [缓存]
   * [设置缓存]
   * [缓存策略]
