@@ -15,12 +15,12 @@
   * [多个图像层](./UserGuide/UsingEarthFiles.md#多个图像层)
   * [添加高程数据](./UserGuide/UsingEarthFiles.md#添加高程数据)
   * [缓存](./UserGuide/UsingEarthFiles.md#缓存)
-* [缓存]
-  * [设置缓存]
-  * [缓存策略]
-  * [环境变量]
-  * [缓存策略设置的优先级]
-  * [填充缓存]
+* [缓存](./UserGuide/Caching.md)
+  * [设置缓存](./UserGuide/Caching.md#设置缓存)
+  * [缓存策略](./UserGuide/Caching.md#缓存策略)
+  * [环境变量](./UserGuide/Caching.md#环境变量)
+  * [缓存策略设置中的优先级](./UserGuide/Caching.md#缓存策略设置中的优先级)
+  * [填充缓存](./UserGuide/Caching.md#填充缓存)
 * [空间参考]
   * [SRS的组成]
   * [SRS的表示]
