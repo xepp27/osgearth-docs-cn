@@ -15,7 +15,7 @@
     * [使用地球文件](./UserGuide/UsingEarthFiles.md)
     * [缓存](./UserGuide/Caching.md)
     * [空间参考](./UserGuide/SpatialReference.md)
-    * [功能和符号](./UserGuide/FeaturesandSymbology.md)
+    * [特征和符号](./UserGuide/FeaturesandSymbology.md)
   * Developer Topics
     * Working with Maps
     * Utilities SDK
