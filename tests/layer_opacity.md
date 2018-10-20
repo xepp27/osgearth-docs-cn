@@ -1,5 +1,5 @@
 
-```C++
+```XML
 <!--
 osgEarth Sample : Layer Opacity
 
