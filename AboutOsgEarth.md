@@ -1,7 +1,7 @@
 
 # 关于 osgEarth
 
-## 介绍
+## 介绍（Introduction）
 osgEarth是一个用于OSG应用程序的地理空间SDK和地形引擎。
 
 osgEarth的任务是：
@@ -24,46 +24,42 @@ osgEarth的任务是：
   - 与商业数据厂家进行整合
   
   
-  ## 社会资源
-  由于osgEarth是一个免费开源SDK，任何人都可以获取源代码，同时我们欢迎并鼓励大家参与到测试、添加特性和修复BUG中。
+ ## 社会资源（Community Resources）
+ 由于osgEarth是一个免费开源SDK，任何人都可以获取源代码，同时我们欢迎并鼓励大家参与到测试、添加特性和修复BUG中。
   
-  **公共论坛**
-  
+ ### 公共论坛（Public Forum） 
   与osgEarth团队和用户进行交互的第一种方式是通过提供支持的论坛。
   **请阅读**并遵守这些使用论坛的指南。
   遵循这些指南可以便于得到其他人的回应与帮助：
   - 用你的真实姓名注册一个账号。你可以匿名注册，但使用真实姓名更便于你进行社交。也要在你的帖子上签名！
   - 每篇帖子仅限*一个主题*。在一篇帖子中询问多个问题难以对回应进行持续追踪。
   - 尽可能多地提供支持信息。
-  发布*地球文件*或*短代码片段*。
-  将输出发布到osgearth_version --caps。
-  如果你在GeoTIFF或其它数据文件中遇到困难，将输出发布到gdalinfo。
+  发布*地球文件*（earth file）或*短代码片段*（short code snippet）。
+  将输出发布到`osgearth_version --caps`。
+  如果你在GeoTIFF或其它数据文件中遇到困难，将输出发布到`gdalinfo`。
   列出到目前为止你尝试过的所有东西。
   - 要有耐心！
 
- **优先服务**
- 
- 如果你有一些问题，或需要更深入的帮助，包括代码审查、设计等，
- 请考虑直接从Pelican Mapping（osgEarth的维护者）购买优先服务。优先服务为您提供基于电子邮件的跟踪、及时、个性化的帮助！
+### 优先服务（Priority Support）
+如果你有一些问题，或需要更深入的帮助，包括代码审查、设计等，
+请考虑直接从Pelican Mapping（osgEarth的维护者）购买优先服务。优先服务为您提供基于电子邮件的跟踪、及时、个性化的帮助！
 
- **OSG论坛**
- 
- 由于osgEarth是基于OSG的，我们留言板上的许多问题都是关于OSG的。
- 我们仍将尽力提供帮助。但是，也可以加入OSG邮件列表或定期阅读OSG论坛。
+### OSG论坛（OSG Forum）
+由于osgEarth是基于OSG的，我们留言板上的许多问题都是关于OSG的。
+我们仍将尽力提供帮助。但是，也可以加入OSG邮件列表或定期阅读OSG论坛。
 
- **社交媒体**
- 
+### 社交媒体（Social Media）
  - 在Twitter上关注@pelicanmapping以获取更新。
  - 将我们的Google+Page添加到您的圈子中以获取素材库。
 
- **专业的服务**
+### 专业业的服务（Professional Services）
  
  osgEarth团队通过专业的服务来对其成果进行维护。
  在Pelican Mapping，我们进行涉及osgEarth（以及一般地理空间技术）的定制软件开发和集成工作。
  我们的总部设在美国，但与世界各地的客户合作。
  如果您需要帮助，请联系我们！
-
- ## 授权
+ 
+## 授权（License）
  osgEarth根据LGPL免费开源许可证授权。
  
  这意味着：
@@ -77,10 +73,10 @@ osgEarth的任务是：
  3. 如果以任何形式重新分发osgEarth*源代码*，
  必须包含未经更改且完整的相关版权声明和许可证信息。
 
- 4. iOS/*静态链接异常*：LGPL要求在LGPL下发布与LGPL库（如osgEarth）静态链接的任何内容。
+ 4. iOS/*静态链接异常*（static linking exception）：LGPL要求在LGPL下发布与LGPL库（如osgEarth）静态链接的任何内容。
  在这种情况下，我们给LGPL一个例外。
  如果您静态地将osgEarth与您的专有代码链接在一起，则不需要在LGPL下发布您自己的代码。
 
- ## 维护者
+## 维护者（Maintainers）
 
  Pelican Mapping维护osgEarth。
