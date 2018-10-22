@@ -68,10 +68,26 @@ osgEarth有一个特征栅格化驱动器：`agglite`驱动器。以下是将一
     </styles>
 </feature_model>
 ```
-
+### 特征图层的组成
+从上述例子中可以看出，对于任意特征图层有一些必要的组成部分。
+- `<features>`模块描述实际特征源，比如osgEarth在哪里获取输入数据。另外，`<feature_source>`引用另一个指定特征数据的图层。
+- `<styles>`模块描述osgEarth如何渲染特征，比如他们在屏幕上的形态，我们称其为*样式表*或*符号系统*。样式表的构成可以从根本上改变特征数据的外观。
+这两个要素都是必选的。
 ## 风格
-
-
+对于地球文件，你可能会看到类似如下的 `<styles>`模块：
+```XML
+<styles>
+    <style type="text/css">
+        buildings {
+            altitude-clamping: terrain;
+            extrusion-height:  15;
+            extrusion-flatten: true;
+            fill:              #ff7f2f;
+        }
+    </style>
+</styles>
+```
+这是一个样式表模块。你可以在`<model>`图层看到
 ## 地形跟踪
 
 
