@@ -16,11 +16,11 @@
     * [缓存](./UserGuide/Caching.md)
     * [空间参考](./UserGuide/SpatialReference.md)
     * [特征和符号](./UserGuide/FeaturesandSymbology.md)
-  * Developer Topics
-    * Working with Maps
-    * Utilities SDK
-    * Shader Composition
-    * Coordinate Systems
+  * [开发者主题](./DeveloperTopics.md)
+    * [使用地图](./DeveloperTopics/WorkingwithMaps.md)
+    * [使用SDK](./DeveloperTopics/UtilitiesSDK.md)
+    * [着色器组成](./DeveloperTopics/ShaderComposition.md)
+    * [坐标系统](./DeveloperTopics/CoordinateSystems.md)
   * Working with Data
     * Where to Find Data
     * Tips for Preparing your own Data
