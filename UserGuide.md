@@ -28,6 +28,6 @@
 * [特征和符号](./UserGuide/FeaturesandSymbology.md)
   * [了解特征](./UserGuide/FeaturesandSymbology.md#了解特征)
   * [创建特征图层](./UserGuide/FeaturesandSymbology.md#创建特征图层)
-  * [风格](./UserGuide/FeaturesandSymbology.md#风格)
+  * [样式](./UserGuide/FeaturesandSymbology.md#样式)
   * [地形跟踪](./UserGuide/FeaturesandSymbology.md#地形跟踪)
   * [渲染大数据集](./UserGuide/FeaturesandSymbology.md#渲染大数据集)
