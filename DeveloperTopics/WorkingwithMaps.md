@@ -66,7 +66,7 @@ MapNode* mapNode = new MapNode( map );
 viewer->setSceneData( mapNode );
 
 ```
-## 在运行时使用地图节点（MapNode）
+## 在运行时使用地图节点(MapNode)
 `MapNode`是用来渲染`Map`的场景图形节点。不论你是从地球文件中载入地图或是使用API创建，你都可以在运行时得到地图以及它的`MapNode`来做一些改变。如果你没有准确地使用API来创建`MapNode`，你首先需要对`MapNode`进行引用才能使用。使用静态函数`get`：
 ```C++
 // Load the map
