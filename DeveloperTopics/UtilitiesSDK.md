@@ -72,16 +72,46 @@ std::string = formatter.format( point );
 
 您还可以为输出字符串指定选项：
 
-**USE_SYMBOLS:**使用度分秒符号
+**USE_SYMBOLS:** 使用度分秒符号
 
-**USE_COLONS:**在各部分间使用冒号
+**USE_COLONS:** 在各部分间使用冒号
 
-**USE_SPACES:**在各部分间使用空格
+**USE_SPACES:** 在各部分间使用空格
 
+### 军事网格参考系统格式器（MGRSFormatter）
+`MGRSFormatter`根据[军事网格参考系统](https://en.wikipedia.org/wiki/Military_Grid_Reference_System)构造字符串。从技术上讲，MGRS坐标表示一个区域而不是一个精确的点，因此必须指定一个精度限定符来控制所表示区域的大小。例如：
+```C++
+MGRSFormatter mgrs( MGRFormatter::PRECISION_1000M );
+std::string str = mgrs.format( geopoint );
+```
+## 鼠标坐标工具MouseCoordsTool
+`MouseCoordsTool`记录鼠标下的地图坐标（或其它指向设备），设置一个回调来响应记录。`MouseCoordsTool`是一个`osgGA::GUIEventHandler`，可以在一个`Viewer`或任意`Node`中设置，如：
+```C++
+MouseCoordsTool* tool = new MouseCoordsTool();
+tool->addCallback( new MyCallback() );
+viewer.addEventHandler( tool );
+```
+创建自己的回调来响应记录。这是一个在Qt状态栏显示鼠标下X,Y例子：
+```C++
+struct PrintCoordsToStatusBar : public MouseCoordsTool::Callback
+{
+public:
+    PrintCoordsToStatusBar(QStatusBar* sb) : _sb(sb) { }
 
+    void set(const GeoPoint& p, osg::View* view, MapNode* mapNode)
+    {
+        std::string str = osgEarth::Stringify() << p.y() << ", " << p.x();
+        _sb->showMessage( QString(str.c_str()) );
+    }
 
-## 鼠标坐标工具MouseCoords Tool
+    void reset(osg::View* view, MapNode* mapNode)
+    {
+        _sb->showMessage( QString("out of range") );
+    }
 
-
+    QStatusBar* _sb;
+};
+```
+为方便起见，`MouseCoordsTool`还附带了一个回调函数，可以将坐标显示到`osgEarthUtil::Controls::LabelControl`。您甚至可以将`LabelControl`传递给构造函数，以使其更容易。
 
 
