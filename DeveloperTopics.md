@@ -8,7 +8,7 @@
   * [数据扫描装置DataScanner](./DeveloperTopics/UtilitiesSDK.md#数据扫描装置DataScanner)
   * [细节纹理DetailTexture](./DeveloperTopics/UtilitiesSDK.md#细节纹理DetailTexture)
   * [对数深度缓冲区Logarithmic Depth Buffer](./DeveloperTopics/UtilitiesSDK.md#对数深度缓冲区Logarithmic)
-  * [格式程序Formatters](./DeveloperTopics/UtilitiesSDK.md#格式程序Formatters)
+  * [格式器Formatters](./DeveloperTopics/UtilitiesSDK.md#格式器Formatters)
   * [鼠标坐标工具MouseCoords Tool](./DeveloperTopics/UtilitiesSDK.md#鼠标坐标工具MouseCoords)
 * [着色器组成](./DeveloperTopics/ShaderComposition.md)
   * [框架基础](./DeveloperTopics/ShaderComposition.md#框架基础)
