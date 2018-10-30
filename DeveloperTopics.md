@@ -13,7 +13,7 @@
 * [着色器组成](./DeveloperTopics/ShaderComposition.md)
   * [框架基础](./DeveloperTopics/ShaderComposition.md#框架基础)
   * [虚拟程序VirtualProgram](./DeveloperTopics/ShaderComposition.md#虚拟程序VirtualProgram)
-  * [着色器封装](./DeveloperTopics/ShaderComposition.md#着色器封装)
+  * [着色器封装ShaderPackages](./DeveloperTopics/ShaderComposition.md#着色器封装ShaderPackages)
   * [特定于osgEarth的概念](./DeveloperTopics/ShaderComposition.md#特定于osgEarth的概念)
 * [坐标系统](./DeveloperTopics/CoordinateSystems.md)
   * [OpenSceneGraph/OpenGL坐标空间](./DeveloperTopics/CoordinateSystems.md#OpenSceneGraph//OpenGL坐标空间)
