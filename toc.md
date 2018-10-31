@@ -21,9 +21,9 @@
     * [使用SDK](./DeveloperTopics/UtilitiesSDK.md)
     * [着色器组成](./DeveloperTopics/ShaderComposition.md)
     * [坐标系统](./DeveloperTopics/CoordinateSystems.md)
-  * Working with Data
-    * Where to Find Data
-    * Tips for Preparing your own Data
+  * [使用数据](./WorkingwithData.md)
+    * [在哪里找到数据](./WorkingwithData/WheretoFindData.md)
+    * [准备你自己的数据时的一些提示](./WorkingwithData/TipsforPreparingyourownData.md)
   * Reference Guides
     * Earth File Reference
     * Driver Reference
