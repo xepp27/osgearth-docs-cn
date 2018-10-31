@@ -22,8 +22,8 @@
     * [着色器组成](./DeveloperTopics/ShaderComposition.md)
     * [坐标系统](./DeveloperTopics/CoordinateSystems.md)
   * [使用数据](./WorkingwithData.md)
-    * [在哪里找到数据](./WorkingwithData/WheretoFindData.md)
-    * [准备你自己的数据时的一些提示](./WorkingwithData/TipsforPreparingyourownData.md)
+    * [在哪里找到数据](./WorkingwithData.md#在哪里找到数据)
+    * [准备你自己的数据时的一些提示](./WorkingwithData.md#准备你自己的数据时的一些提示)
   * Reference Guides
     * Earth File Reference
     * Driver Reference
