@@ -33,6 +33,34 @@
   gdalwarp -t_srs epsg:4326 my_utm_image.tif my_gd_image.tif
   ```
   **构建内部瓦片**
+  通常GeoTiff等格式将其数据保存在扫描行中，但是使用一个瓦片数据集对于osgEarth将会更高效因为它们在内部使用瓦片的方法。
   
-  
+  要使用gdal_translate来构建一个瓦片GeoTiff，可以发出以下命令：
+  ```C++
+  gdal_translate -of GTiff -co TILED=YES input.tif output.tif
+  ```
+  Take是更进一步使用压缩来节省空间。如果数据不包含透明度，则可以使用内部JPEG压缩：
+  ```C++
+  gdal_translate -of GTiff -co TILED=YES -co COMPRESS=JPG input.tif output.tif
+  ```
   **构建视图**
+  添加视图（也称为“金字塔”（pyramids)或“rsets”）有时可以提高osgEarth中大数据源的性能，你可以使用gdaladdo功能来向数据集中添加视图：
+  ```C++
+  gdaladdo -r average myimage.tif 2 4 8 16
+  ```
+ ### 使用osgearth_conv来构建瓦片集
+ 预先平铺(pre-tiling)你的影像可以显著减少加载时间，尤其是在网络上。事实上，如果你想在网络上处理你的数据，这是唯一的方法。
+ 
+ *osgearth_conv*是osgEarth中的一个低级转换工具，一个有用的应用是以瓦片格式平铺大量GeoTiff（或其它输入）。注意：这个方法仅对于支持写入的驱动器（MBTiles，TMS）有用。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
