@@ -143,7 +143,7 @@ osgEarth提取每个输入特征并对其进行样式加工。输出将完全取
   
    **render-lighting：** 禁用多边形中的OpenGL光照。
   
-这只是可用符号的一小部分示例。可以在[符号相关](osgearth-docs-cn/ReferenceGuides/SymbologyReference.md)获取完整表格。
+这只是可用符号的一小部分示例。可以在[符号系统参考](osgearth-docs-cn/ReferenceGuides/SymbologyReference.md)获取完整表格。
 
 ### 表达式（Expressions）
 有些符号特性支持*表达式*。一个表达式是一个简单的内联计算，它使用特征属性值来动态地计算特性 。
