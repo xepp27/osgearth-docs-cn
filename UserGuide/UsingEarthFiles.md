@@ -1,7 +1,7 @@
 # 使用地球文件
 地球文件是地图的XML描述。创建一个地球文件是配置一幅地图并快速启动和运行它最简单的方法。在osgEarth存储库中，您将在`tests`文件夹中找到许多地球文件样例，涵盖各种主题并演示各种功能。我们鼓励探索并试用它们！
 
-也可以参阅：[地球文件相关](osgearth-docs-cn/ReferenceGuide/EarthFileReference.md)
+也可以参阅：[地球文参考](osgearth-docs-cn/ReferenceGuide/EarthFileReference.md)
 
 ## 地球文件内容
 osgEarth使用一种基于XML的称为地球文件的文件格式来指定源数据如何变成OSG场景图。地球文件有`.earth`的扩展名，但它是XML。
@@ -22,7 +22,7 @@ osgEarth使用一种基于XML的称为地球文件的文件格式来指定源数
 ```
 此地球文件使用名为`bluemarble`的单个GeoTIFF图像源创建名为`MyMap`的地心地图。`driver`属性告诉osgEarth用于加载图像的哪个插件。（osgEarth使用插件框架从不同的源加载不同类型的数据。） 
 
-某些子元素（在`图像`中）特定于所选择的驱动程序。要了解有关驱动程序以及如何配置驱动程序的更多信息，请参阅[驱动器相关](osgearth-docs-cn/ReferenceGuide/DriverReference.md)。
+某些子元素（在`图像`中）特定于所选择的驱动程序。要了解有关驱动程序以及如何配置驱动程序的更多信息，请参阅[驱动器参考](osgearth-docs-cn/ReferenceGuide/DriverReference.md)。
 
 ## 多个图像层
 osgEarth支持具有多个图像源的地图。这允许您创建带有交通覆盖的基础图层的地图，或为位于较低分辨率基础地图上的特定区域提供高分辨率区域。
