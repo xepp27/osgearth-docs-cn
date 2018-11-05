@@ -1,7 +1,7 @@
 # 使用地球文件
 地球文件是地图的XML描述。创建一个地球文件是配置一幅地图并快速启动和运行它最简单的方法。在osgEarth存储库中，您将在`tests`文件夹中找到许多地球文件样例，涵盖各种主题并演示各种功能。我们鼓励探索并试用它们！
 
-也可以参阅：[地球文参考](osgearth-docs-cn/ReferenceGuide/EarthFileReference.md)
+也可以参阅：[地球文件参考](osgearth-docs-cn/ReferenceGuide/EarthFileReference.md)
 
 ## 地球文件内容
 osgEarth使用一种基于XML的称为地球文件的文件格式来指定源数据如何变成OSG场景图。地球文件有`.earth`的扩展名，但它是XML。
