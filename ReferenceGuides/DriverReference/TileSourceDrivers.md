@@ -17,3 +17,4 @@
 * [VPB(VirtualPlanerBuilder)](./TileSourceDrivers/VPB.md)
 * [WCS(OGC Web Coverage Service)](./TileSourceDrivers/WCS.md)
 * [WMS(OGC Web Map Service)](./TileSourceDrivers/WMS.md)
+* [XYZ](./TileSourceDrivers/XYZ.md)
