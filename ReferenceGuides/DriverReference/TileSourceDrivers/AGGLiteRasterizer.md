@@ -1,7 +1,7 @@
 # AGGLite Rasterizer
 这个插件使用*agglite*函数库对图像瓦片的特征数据进行栅格化，是现有的一种在地图上渲染矢量几何体的简单且有效方法。
 
-用法实例：
+用法示例：
 ```XML
 <image driver="agglite">
     <features driver="ogr">
