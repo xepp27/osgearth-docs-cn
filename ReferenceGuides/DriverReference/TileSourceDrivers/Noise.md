@@ -76,7 +76,7 @@ noise插件基于一个名为[libnoise](http://libnoise.sourceforge.net/)的Perl
     <octaves>4</octaves>              <!-- add some additional detail -->
 </elevation>
 ```
-对于创建偏移高程数据，我们可以使用*法线地图（normal map）*来伪装它。法线地图是一种不可见纹理，它模拟了使用真实高程数据时得到的法线向量：
+对于创建偏移高程数据，我们可以使用*法线地图（normal map）* 来伪装它。法线地图是一种不可见纹理，它模拟了使用真实高程数据时得到的法线向量：
 ```XML
 <image name="normalmap" driver="noise">
     <shared>true</shared>             <!-- share this layer so our effect can find it -->
