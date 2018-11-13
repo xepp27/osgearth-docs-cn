@@ -25,7 +25,9 @@
 
 **layer：** 一些数据集需要子数据集的附加图层标识符，在这里设置（整数）。
 
-*PostGIS使用中的特别提示：**
+
+*PostGIS使用中的特别提示：*
+
 PostGIS使用一个`connection`字符串而不是`url`来创建它的数据库连接。通常包括表格参考，例如`table = something`。然而，在这个驱动器中，这会导致问题，因此在`layer`属性中指定您的表格。例如：
 ```XML
 <features driver="ogr">
