@@ -74,7 +74,7 @@ osgEarth使用*样式表（Stylesheets）* 渲染*特征（features)* 和*注解
 |extrusion-roof-style|osgEarth应该应用于拉伸形状屋顶的同一样式表中的另一个样式的名称（string）|	
 
 ## 表面
-在适用的情况下，*表面符号（skin symbol）* （SDK：SkinSymbol）将纹理地图应用于几何体。（目前这只适用于拉伸几何体。）
+在适用的情况下，*表面符号（skin symbol）* （SDK：`SkinSymbol`）将纹理地图应用于几何体。（目前这只适用于拉伸几何体。）
 
 |**属性** |**描述** |
 |---|----|
@@ -87,34 +87,118 @@ osgEarth使用*样式表（Stylesheets）* 渲染*特征（features)* 和*注解
 |skin-random-seed|一旦完成滤波（根据上面的属性，osgEarth确定从中选择的最小合适表面集合并随机选择一个。通过设置此种子值，您可以确保相同的“随机”选择每次运行应用程序时都会发生。（整数）|
 
 ## 图标
+*图标符号（icon symbol）*（SDK：`IconSymbol`）描述了二维图标的外观。 图标用于不同的事物，最常见的是：
+* 代替点模型——用图标代替几何体
+* 放置注释
 
-
+|**属性** |**描述** |
+|---|----|
+|icon|图标图像的URI（uri-string）|
+|icon-library|包含图标的资源库名称（可选）|
+|icon-placement|对于模型替换，描述了osgEarth如何用图标代替几何体：|
+||**vertex：** 用图标替换几何体中的每个顶点|
+||**interval：** 根据`icon-density`属性，沿几何体以固定间隔放置图标|
+||**random：** 根据图`icon-density`属性，在几何体中随机放置图标|
+||**centroid：** 在几何体的质心处放置一个图标|
+|icon-density|对于`interval(间隔)`或`random(随机)`的`icon-placement`设置，此属性提示osgEarth应放置多少个实体。该单位约为“每公里的单位”（对于线性数据），或对于多边形数据为“每平方公里单位”。（浮点数）|
+|icon-scale|按此数量缩放图标（浮点数）|
+|icon-heading|沿中心轴旋转图标（浮点数，度）|
+|icon-declutter|激活此图标的清理（decluttering）。osgEarth将尝试自动显示或隐藏事物，以便它们不会在屏幕上重叠。（bool）|
+|icon-align|设置图标相对于其锚点的位置。有效值的格式为“水平-垂直”，包括：|
+||* `left-top`|
+||* `left-center`|
+||* `left-bottom`|
+||* `center-top`|
+||* `center-center`|
+||* `center-bottom`|
+||* `right-top`|
+||* `right-center`|
+||* `right-bottom`|
+|icon-random-seed|对于随机放置操作，设置此种子，以便每次运行应用程序时可以重复随机化（整数）|
+|icon-occlusion-cull|是否剔除遮挡文本，以便在视线受到地形阻挡时不显示|
+|icon-occlusion-cull-altitude|当视线被地形阻挡时，观察者高度（MSL）开始剔除遮挡|
 
 ## 模型
+*模型符号（model symbol）*（SDK：`ModelSymbol`）描述了外部三维模型。与图标一样，模型通常用于：
+* 代替点模型——用三维模型代替几何体
+* 模型注释
 
-
+|**属性** |**描述** |
+|---|----|
+|model|三维模型的URI（uri-string）。使用这个**或** `model-library`属性，但不能同时使用两者。|
+|model-library|包含模型的资源库名称。使用此**或** `model`属性，但不能同时使用两者。|
+|model-placement|对于模型替换，描述osgEarth应如何用模型代替几何体：|
+||**vertex：** 用模型替换几何体中的每个顶点|
+||**interval：** 根据`icon-density`属性，沿几何体以固定间隔放置模型|
+||**random：** 根据图`icon-density`属性，在几何体中随机放置模型|
+||**centroid：** 在几何体的质心处放置一个模型|
+|model-density|对于`interval(间隔)`或`random(随机)`的`model-placement`设置，此属性提示osgEarth应放置多少个实体。该单位约为“每公里的单位”（对于线性数据），或对于多边形数据为“每平方公里单位”。（浮点数）|
+|model-scale|沿所有轴按此数量缩放图标（浮点数）|
+|model-heading|旋转其+Z轴（浮点数，度）|
+|icon-random-seed|对于随机放置操作，设置此种子，以便每次运行应用程序时可以重复随机化（整数）|
 
 ## 渲染
+*渲染符号（render symbol）*（SDK：`RenderSymbol`）应用常规OpenGL渲染设置以及一些特定于osgEarth的设置，这些设置并非特定于任何其他符号类型。
 
+|**属性** |**描述** |
+|---|----|
+|render-depth-test|启用或禁用GL深度测试(boolean)|
+|render-lighting|启用或禁用GL照明(boolean)|
+|render-transparent|透明度（深度排序）bin中渲染的提示（boolean）|
+|render-bin|渲染bin用于排序（字符串）|
+|render-depth-offset|启用或禁用深度偏移。深度偏移是一种GPU技术，它修改片段的深度值，模拟该对象的渲染距离观察者比实际更近或更远。这是一种减轻深度冲突（z-fighting）的机制（boolean）|
+|render-depth-offset-min-bias|设置深度偏移的最小偏差（距观察者偏移）。如果此属性通常设置得充足，其他的所有将自动设置（浮点数，米）|
+|render-depth-offset-max-bias|设置深度偏移的最小偏差（距离观察者偏移）|
+|render-depth-offset-min-range|设置应用最小深度偏移偏差的范围（距观察者的距离）。偏差在指定范围内的最小值和最大值之间逐渐变化|
+|render-depth-offset-max-range|设置应用最大深度偏移偏差的范围（距观察者的距离）。偏差在指定范围内的最小值和最大值之间逐渐变化|
 
 ## 文本
+*文本符号（text symbol）* （SDK：`TextSymbol`）控制文本标签的存在和显示。
+
+|**属性** |**描述** |
+|---|----|
+|text-fill|文本的前景色（HTML颜色）|
+|text-size|文本大小（浮点数，像素）|
+|text-font|要使用的字体的名称（取决于系统）。例如，对于Arial Bold在Windows上使用“arialbd”|
+|text-halo|文本的轮廓颜色；没有轮廓时完全忽略这个属性（HTML颜色）|
+|text-halo-offset|轮廓粗细（浮点数，字形宽度的百分比，默认值0.0625）|
+|text-offset-x|文本的x偏移量，以字形宽度的百分比表示，默认为0.0625|
+|text-offset-y|文本的y偏移量，以字形宽度的百分比表示，默认为0.0625|
+|text-align|文本字符串相对于其中心点（anchor point）的对齐方式|
+||* `left-top`|
+||* `left-center`|
+||* `left-bottom`|
+||* `left-base-line`|
+||* `left-bottom-base-line`|
+||* `center-top`|
+||* `center-center`|
+||* `center-bottom`|
+||* `center-base-line`|
+||* `center-bottom-base-line`|
+||* `right-top`|
+||* `right-center`|
+||* `right-bottom`|
+||* `right-base-line`|
+||* `right-bottom-base-line`|
+||* `base-line`|
+|text-layout|文本布局|
+||* `ltr`|
+||* `rtl`|
+||* `vertical`|
+|text-content|要显示的实际文本字符串（string-expr）|
+|text-encoding|文本内容的字符编码：|
+||* `utf-8`|
+||* `utf-16`|
+||* `utf-32`|
+||* `ascii`|
+|text-declutter|激活此图标的清理（decluttering）。osgEarth将尝试自动显示或隐藏事物，以便它们不会在屏幕上重叠。（bool）|
+|text-occlusion-cull|是否剔除遮挡文本，以便在视线被地形阻挡时不显示|
+|text-occlusion-cull-altitude|当视线被地形阻挡时，观察者高度（MSL）开始剔除遮挡|
 
 
 ## 覆盖
+*覆盖符号（coverage symbol）* （SDK：`CoverageSymbol`）控制如何使用离散值将要素栅格化为覆盖数据。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|**属性** |**描述** |
+|----|----|
+|coverage-value|要编码的浮点值表达式|
