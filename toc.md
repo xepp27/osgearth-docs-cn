@@ -14,7 +14,7 @@
     * [工具](./UserGuide/Tools.md)
     * [使用地球文件](./UserGuide/UsingEarthFiles.md)
     * [缓存](./UserGuide/Caching.md)
-    * [空间参考](./UserGuide/SpatialReference.md)
+    * [空间参考](./UserGuide/SpatialReferences.md)
     * [特征和符号](./UserGuide/FeaturesandSymbology.md)
   * [开发者主题](./DeveloperTopics.md)
     * [使用地图](./DeveloperTopics/WorkingwithMaps.md)
