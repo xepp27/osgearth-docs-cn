@@ -1,3 +1,5 @@
+```XML
+
 <!--
 osgEarth Sample - Annotation going across the dateline.  Should split into multiple features on either side of the earth.
 穿越数据线的注释，会在地球每一边切割成多个特征
@@ -55,3 +57,5 @@ LINESTRING(140.385 35.765 0, 141.1 35.4917 3944.77, 142.163 35.1617 9645.92, 142
 
     </annotations>
 </map>
+
+```
