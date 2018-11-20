@@ -1,7 +1,7 @@
 * aeqd
 * annotation
-* annotation_dateline
-* annotation_dateline_projected
+* [annotation_dateline](./tests/annotation_dateline.md)
+* [annotation_dateline_projected](./tests/annotation_dateline_projected.md)
 * annotation_flat
 * arcgisonline
 * bing
